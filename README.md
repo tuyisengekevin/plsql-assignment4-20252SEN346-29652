@@ -83,10 +83,11 @@ plsql-assignment4-<studentID1>-<studentID2>/
 │   └── calculate_employee_bonus.sql
 │
 ├── 03_tests/
-│   ├── 01_test_procedures.sql
-│   └── 02_test_functions.sql
+│   ├── 03_tests/test_success_cases.sql
+│   └── 03_tests/test_error_cases.sql
 │
 ├── screenshots/
+│      └──<test_name>_output.png 
 │
 └── docs/
     └── IMPLEMENTATION_NOTES.md
