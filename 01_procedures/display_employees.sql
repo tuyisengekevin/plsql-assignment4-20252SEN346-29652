@@ -1,7 +1,3 @@
-
--- Assignment IV: Employee Management System
--- Procedure: Display All Employees
-
 CREATE OR REPLACE PROCEDURE display_employees
 IS
     CURSOR emp_cursor IS
@@ -10,15 +6,18 @@ IS
                d.department_name,
                e.salary
         FROM employees e
-        JOIN departments d
+        LEFT JOIN departments d
         ON e.department_id = d.department_id
         ORDER BY e.employee_id;
 
+    v_count NUMBER := 0;
+
 BEGIN
     DBMS_OUTPUT.PUT_LINE('EMPLOYEE MANAGEMENT REPORT');
-    DBMS_OUTPUT.PUT_LINE('--------------------------');
 
     FOR emp_record IN emp_cursor LOOP
+
+        v_count := v_count + 1;
 
         DBMS_OUTPUT.PUT_LINE(
             'ID: ' || emp_record.employee_id ||
@@ -29,10 +28,11 @@ BEGIN
 
     END LOOP;
 
-EXCEPTION
-    WHEN NO_DATA_FOUND THEN
+    IF v_count = 0 THEN
         DBMS_OUTPUT.PUT_LINE('No employees found.');
+    END IF;
 
+EXCEPTION
     WHEN OTHERS THEN
         DBMS_OUTPUT.PUT_LINE('Error: ' || SQLERRM);
         RAISE;
