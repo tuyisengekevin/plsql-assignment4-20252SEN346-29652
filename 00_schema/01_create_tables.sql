@@ -2,7 +2,7 @@
 -- File: 01_create_tables.sql
 
 CREATE TABLE departments (
-    department_id NUMBER PRIMARY KEY,
+    department_id NUMBER NOT NULL PRIMARY KEY,
     department_name VARCHAR2(100) NOT NULL UNIQUE
 );
 
