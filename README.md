@@ -58,10 +58,9 @@ One department can have multiple employees.
 ## 6. Repository Structure
 
 ```text
-plsql-assignment4-<studentID1>-<studentID2>/
+plsql-assignment4-20252SEN346-29652/
 │
 ├── README.md
-├── .gitignore
 │
 ├── 00_schema/
 │   ├── 01_create_tables.sql
@@ -83,11 +82,10 @@ plsql-assignment4-<studentID1>-<studentID2>/
 │   └── calculate_employee_bonus.sql
 │
 ├── 03_tests/
-│   ├── 03_tests/test_success_cases.sql
-│   └── 03_tests/test_error_cases.sql
+│   ├── 01_test_procedures.sql
+│   └── 02_test_functions.sql
 │
 ├── screenshots/
-│      └──<test_name>_output.png 
 │
 └── docs/
     └── IMPLEMENTATION_NOTES.md
