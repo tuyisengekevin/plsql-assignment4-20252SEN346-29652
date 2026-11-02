@@ -2,6 +2,7 @@
 -- Assignment IV: Employee Management System
 -- Demonstration: Associative Array
 
+
 CREATE OR REPLACE PROCEDURE display_salary_collection
 IS
     -- Define an associative array
